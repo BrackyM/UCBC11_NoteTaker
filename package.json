@@ -1,30 +1,6 @@
 {
-  "name": "uuid",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "path": "^0.12.7",
-    "promise": "^8.3.0",
-    "uuid": "^9.0.0",
-    "uuid4": "^2.0.3"
-  },
-  "directories": {
-    "lib": "lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrackyM/UCBC11_NoteTaker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/BrackyM/UCBC11_NoteTaker/issues"
-  },
-  "homepage": "https://github.com/BrackyM/UCBC11_NoteTaker#readme"
+    "uuid": "^3.4.0"
+  }
 }

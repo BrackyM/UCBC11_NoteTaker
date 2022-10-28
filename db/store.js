@@ -1,6 +1,7 @@
 const util = require('util');
 const fs = require('fs');
 const uuidv1 = require('uuid/v1');
+const path = require("path");
 
 const readFileCon = util.promisify(fs.readFile);
 const writeFileCon = util.promisify(fs.writeFile);
@@ -30,7 +31,7 @@ class Store {
         });
     }
 
-    createNewNote(note) {
+    addNewNote(note) {
         const { title, text } = note;
         
 

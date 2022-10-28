@@ -1,6 +1,6 @@
 const util = require('util');
 const fs = require('fs');
-const uuidv1 = require('uuid');
+const uuidv1 = require('uuid/v1');
 
 const writeFileCon = util.promisify(fs.readFile);
 const readFileCon = util.promisify(fs.writeFile);
@@ -32,6 +32,10 @@ class Store {
     createNewNote(note) {
         const {title, text} = note;
         const newNote = {title, text, id: uuidv1()};
+
+        if (!title || !text) {
+            throw new Error("Note cannot be blank");
+        }
 
         return this.getNotes()
         .then((notes) => [...notes, newNote])
